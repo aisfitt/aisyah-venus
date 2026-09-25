@@ -33,7 +33,11 @@ class MainActivity : AppCompatActivity() {
             val nama = binding.kirim.text
             Log.e("Klik btnSubmit","Tombol berhasil di tekan. Isi dari inputNama = $nama")
             val intent = Intent(this, FourthActivity::class.java)
-            Toast.makeText(this, "Pesan berhasil dikirim ke $nama", Toast.LENGTH_SHORT).show()
+
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
             startActivity(intent)
         }
     }
