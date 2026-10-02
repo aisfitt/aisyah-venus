@@ -12,6 +12,7 @@ import com.example.aisyah_3tif.databinding.ActivityFourthBinding
 import com.example.aisyah_3tif.databinding.ActivityMainBinding
 import com.example.aisyah_3tif.pertemuan_3.ThirdResultActivity
 import com.example.aisyah_3tif.pertemuan_4.FourthActivity
+import com.example.aisyah_3tif.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -29,15 +30,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnToFourth.setOnClickListener {
-            //Mengambil value dari inputNama dan menampilkan di Logcat
-            val nama = binding.kirim.text
-            Log.e("Klik btnSubmit","Tombol berhasil di tekan. Isi dari inputNama = $nama")
             val intent = Intent(this, FourthActivity::class.java)
 
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
 
+            startActivity(intent)
+        }
+
+        binding.btnFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
     }
