@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -42,6 +43,27 @@ class MainActivity : AppCompatActivity() {
         binding.btnFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
+        }
+
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
+        binding.btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah kamu yakin ingin keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Tidak", null)
+                .show()
         }
     }
 }
