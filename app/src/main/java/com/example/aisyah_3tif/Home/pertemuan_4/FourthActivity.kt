@@ -1,9 +1,8 @@
-package com.example.aisyah_3tif.pertemuan_4
+package com.example.aisyah_3tif.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,8 +10,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.aisyah_3tif.MainActivity
 import com.example.aisyah_3tif.R
 import com.example.aisyah_3tif.databinding.ActivityFourthBinding
-import com.example.aisyah_3tif.databinding.ActivityMainBinding
-import com.example.aisyah_3tif.pertemuan_3.ThirdResultActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

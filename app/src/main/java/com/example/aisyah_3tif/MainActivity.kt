@@ -2,18 +2,15 @@ package com.example.aisyah_3tif
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aisyah_3tif.databinding.ActivityFourthBinding
 import com.example.aisyah_3tif.databinding.ActivityMainBinding
-import com.example.aisyah_3tif.pertemuan_3.ThirdResultActivity
-import com.example.aisyah_3tif.pertemuan_4.FourthActivity
-import com.example.aisyah_3tif.pertemuan_5.FifthActivity
+import com.example.aisyah_3tif.Home.pertemuan_4.FourthActivity
+import com.example.aisyah_3tif.Home.pertemuan_5.FifthActivity
+import com.example.aisyah_3tif.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -45,6 +42,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
+        }
+
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnLogout.setOnClickListener {
@@ -65,5 +67,6 @@ class MainActivity : AppCompatActivity() {
                 .setNegativeButton("Tidak", null)
                 .show()
         }
+
     }
 }
