@@ -7,69 +7,102 @@
     android:background="#DCD4D4"
     tools:context=".Home.HomeFragment">
 
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/merah_semangka"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_scrollFlags="scroll|enterAlways"
         app:titleTextColor="@android:color/white"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/btnToFourth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/hijau_semangka"
-        android:text="Pertemuan 4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kirim" />
-
     <TextView
         android:id="@+id/kirim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
         android:text="Selamat datang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/background_header" />
 
-    <Button
-        android:id="@+id/btnFifth"
-        android:layout_width="wrap_content"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/abu_tua"
-        android:text="Pertemuan 5"
+        android:layout_marginTop="48dp"
+        android:padding="16dp"
+        app:columnCount="2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToFourth" />
+        app:layout_constraintTop_toBottomOf="@+id/kirim"
+        app:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/btnToFourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hijau_semangka"
+            android:text="Pertemuan 4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"/>
+
+        <Button
+            android:id="@+id/btnFifth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/abu_tua"
+            android:text="Pertemuan 5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"/>
+
+        <Button
+            android:id="@+id/btnToSeventh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/merah_semangka"
+            android:text="Pertemuan 7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"/>
+
+        <Button
+            android:id="@+id/btnToTenth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hijau_tua"
+            android:text="Pertemuan 10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"/>
+
+    </androidx.gridlayout.widget.GridLayout>
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="56dp"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToSeventh" />
-
-    <Button
-        android:id="@+id/btnToSeventh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/merah_semangka"
-        android:text="Pertemuan 7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFifth" />
-
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

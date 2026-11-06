@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aisyah_3tif.AuthActivity
+import com.example.aisyah_3tif.Home.pertemuan_10.TenthActivity
 import com.example.aisyah_3tif.Home.pertemuan_4.FourthActivity
 import com.example.aisyah_3tif.Home.pertemuan_5.FifthActivity
 import com.example.aisyah_3tif.Home.pertemuan_7.SeventhActivity
@@ -50,6 +51,11 @@ override fun onCreateView(
 
         binding.btnToSeventh.setOnClickListener {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
 
