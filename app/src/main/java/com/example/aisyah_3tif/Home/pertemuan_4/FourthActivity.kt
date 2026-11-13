@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.aisyah_3tif.BaseActivity
 import com.example.aisyah_3tif.MainActivity
 import com.example.aisyah_3tif.R
 import com.example.aisyah_3tif.databinding.ActivityFourthBinding
@@ -33,7 +34,7 @@ class FourthActivity : AppCompatActivity() {
             val name = intent.getStringExtra("name")
             val from = intent.getStringExtra("from")
             val age = intent.getIntExtra("age",0)
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, BaseActivity::class.java)
             Log.e("Data Intent","Nama: $name , Usia: $age, Asal: $from")
             startActivity(intent)
 //            finish()
